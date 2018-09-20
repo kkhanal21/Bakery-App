@@ -1,0 +1,34 @@
+<section id="slider-container" class="top-section">
+  <div class="offset-borders">
+    <div class="ms-fullscreen-template">
+      <div class="master-slider ms-skin-round" id="masterslider">
+        <div class="ms-slide" *ngFor="let f of features">
+          <img src="{{f.image_path}}" alt="header img">
+          <div class="ms-layer">
+            <h2 class="ms-layer" data-type="text" data-effect="rotate3dbottom(30,0,0,70)">{{f.title}}</h2>
+            <h3 class="ms-layer" data-type="text" data-effect="rotate3dbottom(30,0,0,70)" data-delay="200">{{f.description}}</h3>
+          </div>
+        </div>
+        <!-- .ms-slide -->
+        <!-- <div class="ms-slide">
+          <img src="assets/images/slider/2.jpg" alt="header img">
+          <div class="ms-layer">
+            <h2 class="ms-layer ms-right" data-type="text" data-effect="rotate3dright(30,0,0,70)">Fresh baked goods</h2>
+            <h3 class="ms-layer ms-right" data-type="text" data-effect="rotate3dright(30,0,0,70)">We bake three times a days</h3>
+          </div>
+        </div> -->
+        <!-- .ms-slide -->
+        <!-- <div class="ms-slide">
+          <img src="assets/images/slider/3.jpg" alt="header img">
+          <div class="ms-layer">
+            <h2 class="ms-layer" data-type="text" data-effect="rotate3dtop(30,0,0,70)">No. 1 Bakery Template</h2>
+            <h3 class="ms-layer" data-type="text" data-effect="rotate3dtop(30,0,0,70)">Made with Taste and love</h3>
+          </div>
+        </div> -->
+        <!-- .ms-slide -->
+      </div>
+      <!-- .master-slider -->
+    </div>
+    <!-- .ms-fullscreen-template -->
+  </div>
+</section>

@@ -1,0 +1,123 @@
+<div id="check" class="row">
+</div>
+<script>
+    // var list = [];
+
+    // for (var i = 0; i < 24; i++) {
+    //     var test = {
+    //         name: "puzan" + i,
+    //         addresss: "address" + i
+    //     }
+
+    //     list.push(test);
+    // }
+
+    // var createGroupedArray = function (arr, chunkSize) {
+    //     var groups = [], i;
+    //     for (i = 0; i < arr.length; i += chunkSize) {
+    //         groups.push(arr.slice(i, i + chunkSize));
+    //     }
+    //     return groups;
+    // }
+
+    // var chunk1 = createGroupedArray(list, 8); // 24 => 8 8 8
+    // //var chunk2 = createGroupedArray(chunk1[0], 4); // 8 => 4 4    
+    // //var chunk3 = createGroupedArray(chunk2[0], 2); // 4 => 2 2        
+
+
+    // // for (var i in chunk1) {
+    // //     console.log(chunk1[i]);
+    // //     var chunk2 = createGroupedArray(chunk1[i], 4);
+    // //     for (var j in chunk2) {
+    // //         console.log(chunk2[j]);
+    // //         var chunk3 = createGroupedArray(chunk2[j], 2);
+    // //         var a = [];
+    // //         for (var k in chunk3) {
+    // //             console.log("chunck 3 k");
+    // //             console.log(chunk3[k]);
+    // //             a.push(chunk3[k]);
+    // //         }
+    // //     }
+    // // }
+    // // console.log(a);
+
+    // var jarr = [], j;
+    // for (j = 0; j < chunk1.length; j++) {
+    //     jarr.push(createGroupedArray(chunk1[j], 2));
+    // }
+
+    // var karr = [], k;
+    // for (k = 0; k < jarr.length; k++) {
+    //     var l;
+    //     karr.push(createGroupedArray(jarr[k], 2));
+    //     // for (l = 0; l < jarr[k].length; l++) {
+    //     //     //       console.log("jarr[" + k + "][" + l + "]");
+
+    //     // }
+
+    // }
+
+    // var content = "";
+    // for (var z in karr) {
+    //     content += '<div>';
+    //     for (var x in karr[z]) {
+    //         content += '<div class="row">';
+    //         for (var y in karr[z][x]) {
+    //             content += '<div class="col-md-6 onscroll-animate">';
+    //             content += '<div class="row">';
+    //             for (var b in karr[z][x][y]) {
+    //                 content += '<div class="col-sm-6">';
+    //                 content += '<div class="product">'+karr[z][x][y][b].name;
+    //                 content += '</div>';
+    //                 content += '</div>';
+    //             }
+    //             content += '</div>';
+    //             content += '</div>';
+    //         }
+    //         content += '</div>';
+    //     }
+    //     content += '</div>';
+    // }
+    // document.getElementById('check').innerHTML = content;    
+
+    var list = [];
+    for (var i = 0; i < 8; i++) {
+        var test = {
+            name: "puzan"
+        }
+        list.push(test);
+    }
+
+    var createGroupedArray = function (arr, chunkSize) {
+        var groups = [], i;
+        for (i = 0; i < arr.length; i += chunkSize) {
+            groups.push(arr.slice(i, i + chunkSize));
+        }
+        return groups;
+    }
+
+    var formatArr = function (arr) {
+        var chunk1 = createGroupedArray(arr, 4); // 8 => 4 4 
+        var jarr = [], j;
+        for (j = 0; j < chunk1.length; j++) {
+            jarr.push(createGroupedArray(chunk1[j], 2)); // 4 => 2 2
+        }
+        return jarr;
+    }
+
+    var array = formatArr(list);
+    console.log(array);
+    var content = "";
+    for (var j in array) {
+        content += '<div class="col-md-6 onscroll-animate">';
+        content += '<div class="row">';
+        for (var b in array[j]) {
+            content += '<div class="col-sm-6">';
+            content += '<div class="product">' + array[j][b].name;
+            content += '</div>';
+            content += '</div>';
+        }
+        document.getElementById('check').innerHTML = content;
+    }
+
+</script>

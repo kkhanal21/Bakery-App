@@ -1,0 +1,105 @@
+<section class="contact-section">
+  <div class="container">
+    <div class="content-box">
+      <!-- Google map -->
+      <div class="google-map-big-container onscroll-animate">
+        <div class="google-map">
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            <agm-marker [latitude]="lat2" [longitude]="lng2"></agm-marker>
+          </agm-map>
+        </div>
+      </div>
+      <!-- /Google map -->
+
+      <div class="row">
+        <div class="col-md-8 onscroll-animate">
+          <article>
+            <div class="article-header">
+              <h1>Leave us a message</h1>
+            </div>
+            <form class="form-contact-alt" id="contact-form-alt" action="send_email.php" method="post" data-all-fields-required-msg="All fields are required"
+              data-ajax-fail-msg="Ajax could not set the request" data-success-msg="Email successfully sent.">
+              <div class="row">
+                <div class="col-sm-7">
+                  <input type="text" name="name">
+                </div>
+                <div class="col-sm-5 input-description">
+                  <i class="fa fa-user"></i> Name
+                </div>
+                <div class="col-sm-7">
+                  <input type="text" name="email">
+                </div>
+                <div class="col-sm-5 input-description">
+                  <i class="fa fa-envelope"></i> Email
+                </div>
+                <div class="col-sm-7">
+                  <input type="text" name="subject">
+                </div>
+                <div class="col-sm-5 input-description">
+                  <i class="fa fa-file"></i> Subject
+                </div>
+              </div>
+              <textarea name="message"></textarea>
+              <div class="clearfix">
+                <div class="submit-container">
+                  <input type="submit" value="Submit message">
+                </div>
+              </div>
+              <p class="return-msg"></p>
+            </form>
+          </article>
+        </div>
+        <div class="col-md-4 onscroll-animate" data-delay="500">
+          <article>
+            <div class="article-header">
+              <h1>Contact</h1>
+            </div>
+            <p>He turned, stared, bawled something about "crawling out in a thing like a dish cover," and ran on to the gate
+              of the house at the crest. A sudden whirl of black smoke driving across the road hid him for a moment.</p>
+            <div class="margin-20"></div>
+            <p>T: 0 800 500 55 123 465</p>
+            <p>A: Johny Bravo, Street Number, City</p>
+            <p>E: info@yourdomain.com</p>
+          </article>
+          <div class="margin-10"></div>
+          <article>
+            <div class="article-header">
+              <h1>Socialize</h1>
+            </div>
+            <div class="social-icon-container-alt">
+              <a href="#">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </div>
+            <div class="social-icon-container-alt">
+              <a href="#">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </div>
+            <div class="social-icon-container-alt">
+              <a href="#">
+                <i class="fa fa-rss"></i>
+              </a>
+            </div>
+            <div class="social-icon-container-alt">
+              <a href="#">
+                <i class="fa fa-pinterest"></i>
+              </a>
+            </div>
+            <div class="social-icon-container-alt">
+              <a href="#">
+                <i class="fa fa-tumblr"></i>
+              </a>
+            </div>
+            <div class="social-icon-container-alt">
+              <a href="#">
+                <i class="fa fa-skype"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

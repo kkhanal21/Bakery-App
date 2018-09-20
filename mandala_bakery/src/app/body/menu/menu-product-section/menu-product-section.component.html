@@ -1,0 +1,70 @@
+<section id="products-section">
+  <div class="section-content">
+    <div class="container">
+      <header class="section-header">
+        <h1>Our latest bakery products</h1>
+        <p>Check some of our best products and feel the great passion for food</p>
+      </header>
+
+      <div id="products-slider-1" class="products-slider">
+        <div *ngFor="let z of array">
+          <div class="row" *ngFor="let x of z, let i = index">              
+            <div class="col-md-6 onscroll-animate" data-delay="300" *ngFor="let y of x">
+              <div class="row" >
+                <div class="col-sm-6" *ngFor="let b of y">
+                  <div class="product">
+                    <div class="product-preview">
+                      <a href="#">
+                        <img alt="product" src="{{b.image_path}}">
+                      </a>
+                    </div>
+                    <div class="product-detail-container">
+                      <div class="product-icons">
+                        <div class="product-icon-container">
+                          <a href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                          </a>
+                        </div>
+                        <div class="product-icon-container">
+                          <a href="#">
+                            <i class="fa fa-exchange"></i>
+                          </a>
+                        </div>
+                        <div class="product-icon-container">
+                          <a href="#">
+                            <i class="fa fa-heart"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="product-detail">
+                        <h2>
+                          <a href="gallery_single.html">{{b.item_name}}</a>
+                        </h2>
+                        <p>Bakery and cakery</p>
+                        <p class="product-price">{{b.price}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- .products-slider -->
+
+    <p class="text-center onscroll-animate">
+      <a href="#" class="button-void">See all our products</a>
+    </p>
+    <div class="margin-60"></div>
+
+    <!-- .container -->
+  </div>
+  <!-- .section-content -->
+</section>
+
+<!-- <div id="products-slider-1" class="products-slider" *ngFor="let group of groupMenus">        
+        <div *ngFor="let obj of group">{{obj.name}}</div>
+      </div> -->
